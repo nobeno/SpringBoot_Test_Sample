@@ -59,11 +59,7 @@ public class HelloControllerTest {
     @Test
     public void init処理でモデルのフォームへユーザリストが格納される() throws Exception {
         this.mockMvc.perform(get("/hello/init"))
-            .andExpect(model().attribute("dbForm", hasProperty(
-                    "userList", hasItem(
-                        hasProperty(
-                                "userName", is("test2")))))
-            		);
+            .andExpect(model().attribute("dbForm", hasProperty("userList", hasItem(hasProperty("userName", is("test1"))))));
     }
 
 }

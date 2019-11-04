@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tm_user")
-public class User{
+@Table(name = "users")
+public class User extends BaseEntity{
 
 	private Long userId;
 
